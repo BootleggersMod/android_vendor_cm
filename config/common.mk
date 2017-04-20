@@ -124,6 +124,7 @@ PRODUCT_PACKAGES += \
     CMUpdater \
     CustomTiles \
     LineageSetupWizard \
+    Eleven \
     ExactCalculator \
     LiveLockScreenService \
     LockClock \
@@ -355,7 +356,3 @@ PRODUCT_PROPERTY_OVERRIDES += \
 -include vendor/cyngn/product.mk
 
 $(call prepend-product-if-exists, vendor/extra/product.mk)
-$(call prepend-product-if-exists, vendor/bootleggers/booty.mk)
-
-#Make it just for shishu
-TARGET_UNOFFICIAL_BUILD_ID := SHISHU
