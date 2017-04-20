@@ -2,6 +2,9 @@ PRODUCT_BRAND ?= LineageOS
 
 PRODUCT_BUILD_PROP_OVERRIDES += BUILD_UTC_DATE=0
 
+#Make it just for shishu
+TARGET_UNOFFICIAL_BUILD_ID := SHISHUlT
+
 ifeq ($(PRODUCT_GMS_CLIENTID_BASE),)
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.com.google.clientidbase=android-google
@@ -124,7 +127,6 @@ PRODUCT_PACKAGES += \
     CMUpdater \
     CustomTiles \
     LineageSetupWizard \
-    Eleven \
     ExactCalculator \
     LiveLockScreenService \
     LockClock \
@@ -356,3 +358,4 @@ PRODUCT_PROPERTY_OVERRIDES += \
 -include vendor/cyngn/product.mk
 
 $(call prepend-product-if-exists, vendor/extra/product.mk)
+$(call prepend-product-if-exists, vendor/bootleggers/booty.mk)
